@@ -147,7 +147,6 @@ module Tokens
           data: nil
         })
 
-        remove_token(name)
         attrs = {
           name: name.to_s,
           token: options[:token] || self.class.generate_token(options[:size]),

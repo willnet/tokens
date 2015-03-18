@@ -153,11 +153,11 @@ describe Tokens do
       expect(@another_user.find_token_by_name(:uid)).to be_an_instance_of(Token)
     end
 
-    it "isn't duplicated" do
+    it "can be duplicated" do
       @user.add_token(:uid)
       @user.add_token(:uid)
 
-      expect(@user.tokens.where(name: "uid").count).to eql(1)
+      expect(@user.tokens.where(name: "uid").count).to eql(2)
     end
 
     it "returns valid token" do

@@ -21,5 +21,5 @@ ActiveRecord::Schema.define(:version => 0) do
   add_index :tokens, [:tokenizable_type, :tokenizable_id]
   add_index :tokens, :token
   add_index :tokens, :expires_at
-  add_index :tokens, [:tokenizable_id, :tokenizable_type, :name], unique: true
+  add_index :tokens, [:tokenizable_id, :tokenizable_type, :name]
 end
